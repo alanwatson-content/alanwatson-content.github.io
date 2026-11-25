@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tools that keep the words right</title>
+<meta name="description" content="Tools a content designer built with AI: copy changes as tickets AI agents can build from, a brand voice skill, and a sweep of 31 code repositories to find where the words live.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="../index.html">Alan Watson</a><nav aria-label="Site"><ul class="nav"><li><a href="../index.html#fit">For Hippo</a></li><li><a href="../index.html#work" aria-current="page">Work</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul></nav></header>
+<main id="main">
+<header class="cs-head">
+  <p class="eyebrow">Case study 7 of 7 &middot; Content systems and AI</p>
+  <h1>Tools that keep the words right</h1>
+  <p class="lede">Good words don't help much if they sit in a backlog, or if the next person writing a text message can't find them. In 2025 and 2026 I built a few tools to fix that, mostly with AI. Each one started with a problem I kept running into.</p>
+  <dl class="facts">
+    <div><dt>Role</dt><dd>Content designer. Content lead in giffgaff's AI build pilot, owner of the content team's brand voice skill</dd></div>
+    <div><dt>With</dt><dd>Engineers, product designers, the content team, the AI build pilot team</dd></div>
+    <div><dt>When</dt><dd>2025 to 2026</dd></div>
+    <div><dt>Tools</dt><dd>Claude, Claude Code, Claude skills, Jira, Figma, GitHub</dd></div>
+  </dl>
+</header>
+
+<ul class="kpis" aria-label="Scope">
+  <li><span class="stat-value">31</span><span class="stat-label">code repositories swept by AI agents to find the website's words</span><span class="stat-note">About 63 content files across 16 of them, no CMS</span></li>
+  <li><span class="stat-value">40+</span><span class="stat-label">buy journey screens checked against the live code</span><span class="stat-note">After testing the copy-change page showed the designs were out of date</span></li>
+  <li><span class="stat-value">7</span><span class="stat-label">help articles written or reviewed for an AI help agent</span><span class="stat-note">So it could answer common questions without an adviser</span></li>
+</ul>
+
+<div class="prose">
+  <h2>Copy changes as their own tickets</h2>
+  <p>Small copy fixes waited to be bundled into someone else's work. And tickets were written from Figma screenshots, which aren't always what's live.</p>
+  <p>giffgaff is piloting a way of building where AI agents pick up tickets and do the build. If a copy change is written as a ticket the agents can read, it doesn't have to wait for an engineer's time.</p>
+  <p>I mapped the process from content idea to ticket and agreed a ticket format with the team: the page, links to the current and new Figma frames, old copy, new copy, why it's changing, and one Given/When/Then scenario. Then I built a shareable page that does it. Paste the old and new copy, or point it at two Figma frames and it pulls the copy out. It shows you the ticket first, and you can tell Claude in a chat box if a string's wrong or something's missing. It can change the ticket but not the design. Then you fire it, and it raises the Jira ticket through your own Atlassian and Figma connections.</p>
+  <figure class="compare">
+    <div>
+      <p class="eyebrow">Step 1: old and new copy in</p>
+      <img class="shot" src="../images/catapult-copy-changes-form.png" alt="The Catapult copy changes page. Old copy and new copy fields each hold a link to a Figma frame, and the reason for the change says: Rewrite in the new ToV. A button underneath says: Show me ticket preview." width="1000" height="968" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow">Step 2: check the ticket, then fire</p>
+      <img class="shot" src="../images/catapult-copy-changes-preview.png" alt="The end of a ticket preview, with notes saying only the first body paragraph changes, and a source line. Below it, a chat box headed: Anything not right? Claude can change the ticket, not the design. A button underneath says: Fire catapult!" width="1000" height="622" loading="lazy">
+    </div>
+    <figcaption>Two Figma links and a reason in. A ticket preview out, with a chat box to fix anything wrong before it goes to the board.</figcaption>
+  </figure>
+  <p>Copy changes now go through as their own tickets. Testing the page on real broadband tickets also turned up something nobody had spotted: the Figma files didn't match what was live. I had the 40-odd buy journey screens checked against the code, got Figma updated, and killed a ticket that would have changed live copy to match a wrong design. I've updated the skills behind this tool to check the old copy actually exists before it raises anything.</p>
+
+  <h2>A brand voice skill for the team's AI assistant</h2>
+  <p>The content team had started using an AI assistant for first drafts and checks. Without the style guide, it had nothing to write to.</p>
+  <p>People were going to use it anyway. Better that it starts from our voice and our rules than from nothing.</p>
+  <p>So I built a skill for Claude that holds the voice principles, the volume dial for each channel, the glossary, and the inclusive and accessible writing rules. I asked the content team which brand documents it should draw on.</p>
+  <p>A first draft of an SMS or a help article now starts from the same place whoever asks for it. When the new voice landed in September 2026, I rewrote the skill that week so the tooling didn't keep producing the old one.</p>
+  <p>It's better at checking than writing. On the <a href="brand-voice.html">tone of voice rewrite</a> I binned its fluent first drafts and wrote the final version myself. Run over a Figma flow before handoff, it caught a competitor's name in an FAQ, leftover lorem ipsum and steps in the wrong order.</p>
+
+  <h2>Finding where the words live</h2>
+  <p>Before you can change copy you have to find it. giffgaff.com has no content management system, so a single phrase can be hardcoded in several places. A brand refresh needs every one of them.</p>
+  <p>Reading 31 code repositories by hand isn't a sensible job for a content designer, so I had AI agents sweep them and report where member-facing wording lives. Then I wrote a "find every mention first" process any product team can use before changing copy: search every repository, sort what you find into member-facing, internal or test, trace shared components to where they show up, and write a file-by-file ticket that says what's out of scope.</p>
+  <p>The words sit in about 63 files across 16 repositories, a lot of it hardcoded, in 4 different conventions. That went to the brand refresh team, fed into planning for the AI build pilot, and became the starting point for the CMS requirements I drafted for web and app.</p>
+
+  <h2>Writing for the help bot</h2>
+  <p>giffgaff's AI help agent answers questions before they reach an adviser, and it can only be as good as what it reads. I wrote or reviewed 7 broadband help articles so it had what it needed, split the muddled switching article into one for joining and one for leaving so it had a clean source for each, and asked it the questions myself after changes to check it gave the new answer. More on that in <a href="help-and-accessibility.html">Help content anyone can use</a>.</p>
+
+  <h2>Where I stop</h2>
+  <p>I still test the words with people before anything goes live. And when a tool touches something engineers, legal or security own, I bring them in.</p>
+</div>
+
+<nav class="pager" aria-label="Case studies">
+  <a href="brand-voice.html"><span class="eyebrow">Previous</span><span>A new tone of voice, at scale</span></a>
+  <a class="next" href="../index.html#work"><span class="eyebrow">Back</span><span>All work</span></a>
+</nav>
+</main>
+<footer class="site-footer"><p>Alan Watson, content designer, London.</p><p><a href="../index.html#contact">Get in touch</a></p></footer>
+</body>
+</html>
