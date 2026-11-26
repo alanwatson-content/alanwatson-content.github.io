@@ -427,3 +427,6 @@ figure.single .shot { max-width: 24rem; }
 .fit p { color: var(--ink-2); font-size: 1rem; }
 .fit a { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; margin-top: 0.25rem; }
 .fit a::after { content: " \2192"; color: var(--accent); }
+
+/* Context paragraph under the decision lead-in */
+.cs-context { max-width: 36rem; color: var(--ink-2); font-size: 1.1rem; line-height: 1.55; }
